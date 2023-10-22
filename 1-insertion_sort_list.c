@@ -15,24 +15,26 @@ void insertion_sort_list(listint_t **list)
 	{
 		next = list_copy->next;
 		current = list_copy;
-		while (current->prev != NULL && current->n < current->prev->n)
-		{
-			if (current->prev)
-			{
-			if (current->next)
-				current->next->prev = current->prev;
-			if (current->prev->prev)
-				current->prev->prev->next = current;
-			temp = current->prev->prev;
-			current->prev->prev = current;
-			current->prev->next = current->next;
-			current->next = current->prev;
-			current->prev = temp;
-			if (current->prev == NULL)
-				*list = current;
-			print_list(*list);
-			}
-		}
+        {          
+        while (current->n < current->prev->n)
+            {
+                if (current->prev)
+                {
+                if (current->next)
+                    current->next->prev = current->prev;
+                if (current->prev->prev)
+                    current->prev->prev->next = current;
+                temp = current->prev->prev;
+                current->prev->prev = current;
+                current->prev->next = current->next;
+                current->next = current->prev;
+                current->prev = temp;
+                if (current->prev == NULL)
+                    *list = current;
+                print_list(*list);
+                }
+            }
+        }
 	list_copy = next;
 	}
 }
