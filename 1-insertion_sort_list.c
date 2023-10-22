@@ -7,7 +7,6 @@
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *list_copy, *current, *temp, *next;
-	int i = 0;
 
 	if (*list == NULL)
 		return;
@@ -16,7 +15,6 @@ void insertion_sort_list(listint_t **list)
 	{
 		next = list_copy->next;
 		current = list_copy;
-		i++;
 		while (current->prev != NULL && current->n < current->prev->n)
 		{
 			if (current->prev)
