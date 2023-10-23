@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+		{
+			"label": "compile",
+			"type": "shell",
+			"command": "gcc",
+			"args": [
+				"-Wall",
+				"-Wextra",
+				"-Werror",
+				"-pedantic",
+				"-std=gnu89",
+				"101-main.c",
+				"101-cocktail_sort_list.c",
+				"print_list.c",
+				"-o",
+				"cocktail"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}
