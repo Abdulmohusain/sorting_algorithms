@@ -9,6 +9,8 @@ void cocktail_sort_list(listint_t **list)
 	listint_t *tail_stop = NULL, *head_stop = NULL, *tail, *head = *list;
 	int sorted = 0, swapped;
 
+    if (list == NULL || *list == NULL)
+        return;
 	while (sorted <= 0)
 	{
 		while (head->next != tail_stop)
