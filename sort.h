@@ -27,5 +27,6 @@ void swap_right(listint_t *head);
 void swap_left(listint_t *tail);
 void merge_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
+void heap_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
 #endif

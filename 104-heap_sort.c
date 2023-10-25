@@ -38,7 +38,7 @@ void heap(int *array, size_t size, size_t idx, size_t original)
 	{
 		swap(array + original, array + big);
 		print_array(array, size);
-		heapify(array, size, idx, big);
+		heap(array, size, idx, big);
 	}
 }
 
